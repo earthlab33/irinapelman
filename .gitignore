@@ -1,0 +1,16 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# audio stuff
+/soundmanager
+/mp3
+/mh
+/media
+/jwplayer
+*.mp4
+*.mp3
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

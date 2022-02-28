@@ -1,0 +1,257 @@
+/* basic stuff */
+
+
+body {
+	font: 0.65em/1.3em Verdana, Arial, Helvetica, sans-serif ;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	background: #dfd7c0;
+	color: #000;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+h3 {
+	width: 100%; /* needed for IE5+ */
+	font-family: Times, serif;
+	font-size: 110%;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	word-spacing: 0.3em;
+	border-bottom: #c50505 1px solid;
+}
+
+html > body h3 {
+	/* redefinition of the border to dotted,
+	hidden from IE - because the dashed line
+	that IE uses instead of dots looks a bit
+	too crude in my opinion */
+	border-bottom: #000 1px dotted;
+}
+
+acronym {
+	/* in this case, I can live with IE's dashed line */
+	border-bottom: #000 1px dotted;
+}
+
+a, a:link { color: #900; background: transparent; text-decoration: none; }
+a:visited { color: #933; background: transparent }
+a:hover { color: #966; background: transparent }
+a:active { color: #988; background: transparent }
+
+/* let's start with the whole page container */
+
+#container {
+	position: relative;
+	margin: 10px auto;
+	width: 750px;
+	padding: 5px;
+	text-align: left;
+	background: #fff;
+	border: #475586 3px solid;
+	color: inherit;
+}
+
+/* and now the specific divs */
+
+#pageHeader {
+	padding-left: 5px;
+	height: 150px;
+	margin: -5px;
+    text-align: left;
+	background: #f352d7 url(lotusearth.jpg) no-repeat top center;
+	font-family:"Times New Roman", Times, serif;
+	font-size:45px;
+	color: #fff;
+}
+
+#pageHeader h1 {
+display: none;
+}
+
+#pageHeader h2 {
+	display: block;
+	font-size:25px;
+	font-family:"Times New Roman", Times, serif;
+	text-align:left;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+
+#quickSummary {
+	background: #f352d7;
+	height: 0px;
+	width: 750px;
+	position:inherit;
+	margin: 0px;
+	padding: 0px;
+	color: inherit;
+	font-size: 1em;
+}
+#preamble, #supportingText {
+	text-align: left;
+	font-size: 1.3em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	margin: 5px 25px 1em 25px;
+	widows: 700px;
+	padding: 5px;
+}
+
+#quickSummary a, #preamble a, #supportingText a {
+	text-decoration: none;
+	font-weight: bold;
+	width: 60px;
+}
+#navlinks {
+	position:absolute;
+	top: 70px; left: 100px;
+	margin: 0;
+	padding-top: 15px;
+}
+#navlinks li {
+	display:inline-block; 
+	background: transparent;
+	font-size:12px; 
+	float:left;
+	margin: 3em 2px 2px -.8em; 
+	padding-right: 8px;
+}
+#navlinks li.last {
+	border-right: 0;
+}
+#navlinks a {
+	color: #FFFFFF;
+} 
+#navlinks a:hover { 
+color: #c50505; 
+} 
+
+#explanation {
+	/* a little inelegant, but gets the job done */
+	margin-top: -3em;
+}
+#preamble  {
+	width: 700;
+}
+#preamble img {
+margin: 5px;
+}
+#linkList {
+	position: fixed;
+	top: 100px;
+	padding: 25px 5px 5px 5px;
+	margin: 0;
+	width: 150px; height: 142px;
+	background: transparent;
+}
+
+#lselect ul, #lresources ul, #larchives ul {
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+
+#lselect ul li, #lresources ul li, #larchives ul li{
+	list-style-type: none;
+	border: #000 1px solid;
+	padding: 2px;
+	margin: 2px;
+	text-align: left;
+	background: #fff;
+	color: inherit;
+}
+
+/* there seems to be an issue in Opera with the hover on the lselect...
+any clues to a solution would be appreciated ;) */
+
+#lselect ul li:hover, #lresources ul li:hover, #larchives ul li:hover {
+	background: #900;
+	color: #fff;
+}
+
+#lselect ul li:hover a, #lresources ul li:hover a, #larchives ul li:hover a {
+	background: inherit;
+	color: #eee;
+}
+
+#lselect ul a:hover, #lresources ul a:hover, #larchives ul a:hover {
+	/* this style is there to make up for IE's inability to apply
+	:hover pseudo to an li. of course, it won't look the same as having the whole
+	li turn red, but it should be an acceptable compromise */
+	background: #900;
+	color: #eee;
+}
+
+#lresources, #larchives {
+	padding: 25px 5px 5px 5px;
+	background: url(spikes.png) no-repeat center top;
+}
+
+
+
+#footer {
+	margin: 0;
+	padding: 5px;
+	/* again, I can live with IE's dashed line */
+	border: 1px #000 dotted;
+	background: #fff;
+	color: inherit;
+	text-align: center;
+}
+
+#footer a {
+	margin-right: 20px;
+	padding-left: 18px;
+	background: url(bullet.png) no-repeat left center;
+}
+
+
+/* and now for the big caps for each paragraph in supportingText
+this is again hidden from IE, as it tends to crash otherwise and
+I really can't be bothered to work around its flaws...consider it
+icing on the cake for non-IE users */
+
+body > div#supportingText p:first-letter {
+	font: 2em Times, Helvetica, serif;
+	float: left;
+	text-transform: uppercase;
+	margin: 0 3px 3px 0;
+	padding: 0; 
+}
+
+/* 	the following two rules may be just a minor detail, but i think it's worth it.
+they add a little download icon in front of the sample CSS and HTML download links.
+the first one works in all 5+ browsers, whereas the second one is only for CSS2 compliant
+ones. also, use of the |= selector may be "unorthodox", but it was the best I could come up
+with since the two download links in the "participation" div are not especially marked up
+with a class, AND there are other links in that div ("CSS Resource Guide", "Send us a link" and "contact me") that
+do not need the little icon...hence the rule could not be applied to "#participation a" */
+
+#quickSummary a {
+	padding-left: 15px;
+	background: url(download.png) no-repeat left center;
+}
+
+#participation a[href|=zengarden] { 
+	/* CSS2-compliant only */
+	padding-left: 15px;
+	background: url(download.png) no-repeat left center;
+}
+
+#copyw {
+font: 1em Times, Helvetica, serif;
+	float: right;
+	margin: 0 3px 3px 0;
+	padding: 0; 
+}
+
+/* no need for extras...they're just not displayed */
+
+#extraDiv1, #extraDiv2, #extraDiv3, #extraDiv4, #extraDiv5, #extraDiv6 {
+	display: none;
+}
+
