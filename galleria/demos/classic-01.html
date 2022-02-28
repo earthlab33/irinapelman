@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <title>Galleria Classic Theme Demo 01</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="../src/galleria.js"></script>
-        <script src="../src/plugins/galleria.flickr.js"></script>
-        <style>
-            html,body{background:#111}
-            #galleria{width:700px;margin:20px auto}
-        </style>
-    </head>
-<body>
+  <head>
+    <title>Galleria Classic Theme Demo 01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="../src/galleria.js"></script>
+    <script src="../src/plugins/galleria.flickr.js"></script>
+    <style>
+      html,
+      body {
+        background: #111;
+      }
+      #galleria {
+        width: 700px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
     <div id="galleria"></div>
-    
+
     <script>
-    
-    // Load theme
-    Galleria.loadTheme('../src/themes/classic/galleria.classic.js');
-    
-    // intiialize flickr plugin
-    var flickr = new Galleria.Flickr('fddd7bc223fe37295faace93a4f2d8fc');
-    
-    // inject a photset into galleria
-    flickr.getSet('72057594078378762', { 
-        size: 'medium'
-    }, function(data) {
-        $('#galleria').galleria({
-            data_source:data
-        });
-    });
-    
+      // Load theme
+      Galleria.loadTheme("../src/themes/classic/galleria.classic.js");
+
+      // intiialize flickr plugin
+      var flickr = new Galleria.Flickr("fddd7bc223fe37295faace93a4f2d8fc");
+
+      // inject a photset into galleria
+      flickr.getSet(
+        "72057594078378762",
+        {
+          size: "medium",
+        },
+        function(data) {
+          $("#galleria").galleria({
+            data_source: data,
+          });
+        }
+      );
     </script>
-    </body>
+  </body>
 </html>
