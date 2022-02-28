@@ -6,11 +6,9 @@
 /mh
 /media
 /jwplayer
+/script
 *.mp4
 *.mp3
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.swf
+swfobject.js
+flash*
